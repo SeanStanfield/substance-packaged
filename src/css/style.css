@@ -277,7 +277,7 @@ footer .wrapper .footer-list li h4 {
 }
 
 .rectangles {
-  background-image: url(/assets/svgGraphics/rectangles.svg);
+  background-image: url(/src/img/svgGraphics/rectangles.svg);
   background-repeat: no-repeat;
   background-position: center left;
   background-size: 75%;
@@ -294,7 +294,7 @@ footer .wrapper .footer-list li h4 {
 }
 
 .house {
-  background-image: url(/assets/svgGraphics/houseDesktop.svg);
+  background-image: url(/src/img/svgGraphics/houseDesktop.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
@@ -302,7 +302,7 @@ footer .wrapper .footer-list li h4 {
 }
 
 .multi-board {
-  background-image: url(/assets/svgGraphics/desktopMultiboard.svg);
+  background-image: url(/src/img/svgGraphics/desktopMultiboard.svg);
   background-repeat: no-repeat;
   background-position: left;
   background-size: contain;

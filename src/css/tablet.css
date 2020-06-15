@@ -142,14 +142,14 @@
   }
 
   .house {
-    background-image: url(/assets/svgGraphics/houseMobile.svg);
+    background-image: url(/src/img/svgGraphics/houseMobile.svg);
     min-height: 300px;
     margin: 40px 0px 50px 0px;
     background-position: center;
   }
 
   .multi-board {
-    background-image: url(/assets/svgGraphics/mobileMultiboard.svg);
+    background-image: url(/src/img/svgGraphics/mobileMultiboard.svg);
     min-height: 250px;
     margin: 40px 0px;
     background-position: center;
