@@ -1,0 +1,58 @@
+@media all and (max-width: 600px) {
+  .hero .mobile-hero {
+    max-height: 650px;
+    min-height: 650px;
+  }
+
+  .hero .standing-girl {
+    display: none;
+  }
+
+  .hero .layer-three {
+    margin-left: 38vw;
+  }
+
+  .hero h3 {
+    font-size: 12px;
+  }
+
+  section.hero {
+    height: 500px;
+    min-height: 500px;
+  }
+
+  .hero .hero-artboard {
+    left: 10vw;
+    top: 140px;
+    margin-top: 9vh;
+    padding-top: 12vw;
+    width: 38vw;
+  }
+
+  .text-block .about-header {
+    font-size: 36px;
+  }
+
+  .text-block .about-body {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .sittingWoman {
+    width: 150px;
+  }
+
+  div.rectangles {
+    background-position: left 20%;
+  }
+
+  section.services {
+    margin-top: -20vh;
+    z-index: -1;
+  }
+
+  .sittingWoman {
+    top: -70px;
+    right: 5px;
+  }
+}

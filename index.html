@@ -4,11 +4,258 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Substance qi</title>
+    <!-- css -->
     <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/tablet.css" />
+    <link rel="stylesheet" href="/src/css/mobile.css" />
+    <link rel="stylesheet" href="/src/css/ultrawide.css" />
+
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>IT WORKS</h1>
+    <nav class="nav">
+      <div class="logo">
+        <img src="/src/img/substanceqiLogo.svg" alt="substanceqiLogo" />
+      </div>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li class="nav-link"><a href="#">Case Studies</a></li>
+          <li class="nav-link"><a href="#">Contact</a></li>
+        </ul>
+        <div class="hamburger-menu">
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+        </div>
+      </div>
+    </nav>
+    <section class="hero">
+      <!-- mobile hero gradient -->
+      <svg
+        class="mobile-hero"
+        preserveAspectRatio="none"
+        viewBox="0 10 360 520"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M410.5 -3C410.5 -3 481.5 502.5 410.5 441.5C339.5 380.5 303.873 375.937 190.5 386.5C104.633 394.5 64.5 301.5 -1 301.5V-3H410.5Z"
+          fill="url(#paint0_linear)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear"
+            x1="-3.49998"
+            y1="7.49991"
+            x2="504.938"
+            y2="198.156"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#3B5EB9" />
+            <stop offset="1" stop-color="#33C6CF" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <!-- desktop hero gradient -->
+      <svg
+        class="desktop-hero"
+        preserveAspectRatio="none"
+        viewBox="0 0 1600 1011"
+        fill="none"
+      >
+        <path
+          id="Vector 2"
+          d="M0 277.5V0H1642C1642 0 1869 1141.5 1617 998C1365 854.5 1000.5 989.5 786 894.5C666.548 825.407 497.824 687.414 387 680C143.502 625.308 0 277.5 0 277.5Z"
+          fill="url(#paint1_linear)"
+        />
+        <defs>
+          <linearGradient
+            id="paint1_linear"
+            x1="13.5"
+            y1="13"
+            x2="1574.5"
+            y2="1160.5"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#3B5EB9" />
+            <stop offset="1" stop-color="#33C6CF" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="hero-text-wrapper">
+        <div class="hero-text-container">
+          <div class="layer-one">
+            <h3 class="hero-small">We have been providing</h3>
+            <h1 class="hero-large">deep understanding</h1>
+          </div>
+          <div class="layer-two">
+            <h3 class="hero-small">of the complexitites of</h3>
+            <h1 class="hero-large">human behaviour</h1>
+          </div>
+          <div class="layer-three">
+            <h3 class="hero-small">for</h3>
+            <h1 class="hero-large">15 years</h1>
+            <a href="#" class="cta">Contact us</a>
+          </div>
+        </div>
+      </div>
+      <img
+        class="hero-artboard"
+        src="/src/img/svgGraphics/hero-artboard.svg"
+        alt="Noteboard with Post it notes"
+      />
+      <img
+        class="standing-girl"
+        src="/src/img/svgGraphics/StandingGirl.svg"
+        alt=""
+      />
+    </section>
 
-    <script src="./dist/bundle.js"></script>
+    <section class="about">
+      <div class="about-content">
+        <div class="text-block first">
+          <h2 class="about-header">What we do</h2>
+          <p class="about-body">
+            We work on the stage of Market Insight and play a significant role
+            in progressing company performance.
+          </p>
+          <br />
+          <p class="about-body">
+            Fusing industry knowledge and intelligence with customer motivations
+            and drivers.
+          </p>
+        </div>
+        <div class="img-space multi-board second"></div>
+        <div class="img-space house fourth"></div>
+        <div class="text-block third">
+          <h2 class="about-header">We get involved</h2>
+          <p class="about-body">
+            With Director involvement at every stage we build relationships,
+            inspire people, and make research stimulating for everyone involved.
+          </p>
+        </div>
+        <div class="text-block fifth">
+          <h2 class="about-header">Problem solving</h2>
+          <p class="about-body">
+            We bring an open, collaborative attitude to all projects and breathe
+            life into the most prosaic of topics.
+          </p>
+          <br />
+          <p class="about-body">
+            From problem curation to solution, we challenge assumptions and
+            unpack the truth.
+          </p>
+        </div>
+        <div class="img-space rectangles sixth"></div>
+      </div>
+    </section>
+
+    <section class="services">
+      <img
+        src="/src/img/svgGraphics/sittingWoman.svg"
+        class="sittingWoman"
+        alt=""
+      />
+      <svg
+        class="desktop-services"
+        preserveAspectRatio="none"
+        viewBox="0 0 1600 2429"
+        fill="none"
+      >
+        <path
+          d="M1632.47 0.87207L1606.5 2428.5C1065.5 1960.5 377.033 2416 3.49988 1895.5C-370.033 1375 -28.9385 533 -28.9385 533C-28.9385 533 179.062 286 541.967 372.372C694.38 408.647 977.467 338.872 1153.97 218.872C1330.47 98.8721 1632.47 0.87207 1632.47 0.87207Z"
+          fill="#011138"
+        />
+      </svg>
+      <!-- desktop services -->
+      <svg
+        class="mobile-services"
+        preserveAspectRatio="none"
+        viewBox="0 0 411 995"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M410.592 0V994.5C295 855.5 82.0618 915.981 -3.46136 764.5C-88.9845 613.019 -4 167.5 -4 167.5C-4 167.5 59.5 71.5 197.5 71.5C335.5 71.5 410.592 0 410.592 0Z"
+          fill="#011138"
+        />
+      </svg>
+      <!-- mobile services -->
+    </section>
+
+    <section class="industry"></section>
+
+    <section class="knowMore">
+      <svg
+        class="mobile-knowMore"
+        preserveAspectRatio="none"
+        viewBox="0 0 411 706"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M-1.7069 20.1323C103.293 179.132 288.293 87.1325 436.34 225.633C584.386 364.133 411 660.5 411 660.5C239 771 134.5 633 -1.70694 702C-1.70694 702 -106.707 -138.867 -1.7069 20.1323Z"
+          fill="url(#paint2_linear)"
+        />
+        <defs>
+          <linearGradient
+            id="paint2_linear"
+            x1="-3.99997"
+            y1="52.5"
+            x2="396.5"
+            y2="480"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#3C60B9" />
+            <stop offset="1" stop-color="#34C1CE" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <!-- mobile know more -->
+      <svg
+        class="desktop-knowMore"
+        preserveAspectRatio="none"
+        viewBox="0 0 1600 1209"
+        fill="none"
+      >
+        <path
+          d="M2.49988 138.501C792 763.002 697.502 44.0012 1603 577.501C2508.5 1111 1603 1209 1603 1209L-0.000305176 1209C-0.000305176 1209 -787 -485.999 2.49988 138.501Z"
+          fill="url(#paint3_linear)"
+        />
+        <defs>
+          <linearGradient
+            id="paint3_linear"
+            x1="-2.50019"
+            y1="170"
+            x2="1578"
+            y2="1194"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#3C60B9" />
+            <stop offset="1" stop-color="#34C1CE" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <!-- desktop knowmore -->
+    </section>
+    <footer>
+      <div class="wrapper">
+        <ul class="footer-list">
+          <li><h4>About</h4></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><p>Site by Sean Stanfield</p></li>
+        </ul>
+        <ul class="footer-list">
+          <li><h4>Contact us</h4></li>
+          <li><p>info@substanceqi.com</p></li>
+          <li><p>07725 593167</p></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="/dist/bundle.js"></script>
   </body>
 </html>

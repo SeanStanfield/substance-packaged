@@ -1,0 +1,164 @@
+@media all and (max-width: 900px), all and (orientation: portrait) {
+  section.knowMore {
+    background-color: #f6f6f6;
+    z-index: -1;
+  }
+
+  section.about {
+    padding-top: 1rem;
+  }
+
+  section.services {
+    margin-top: -13vmin;
+  }
+
+  svg[class*="desktop"] {
+    display: none;
+  }
+
+  svg[class*="mobile"] {
+    display: block;
+    min-height: 800px;
+  }
+
+  .sittingWoman {
+    top: -80px;
+  }
+
+  .nav .nav-menu .nav-links {
+    display: none;
+  }
+
+  .nav .logo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  .nav .logo img {
+    max-width: 65vw;
+    margin: auto;
+    /* margin-top: 0px; */
+  }
+
+  body nav .nav-menu {
+    width: 10%;
+  }
+
+  .hamburger-menu {
+    /* margin: auto; */
+    margin-left: auto;
+    margin-right: 2rem;
+    margin-top: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 36px;
+    height: 26px;
+    /* background-color: palegoldenrod; */
+  }
+
+  .hamburger-menu .ham-line {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+  }
+
+  .hero-text-wrapper {
+    padding-left: 0;
+    /* justify-content: center; */
+    top: 110px;
+  }
+
+  .hero h1 {
+    font-size: 7vw;
+  }
+
+  .hero .cta {
+    font-size: 13px;
+    padding: 0.4rem 1.3rem;
+  }
+
+  .hero .layer-three {
+    margin-left: 30vw;
+  }
+
+  .hero .hero-artboard {
+    top: 25vmax;
+    margin-top: 100px;
+    width: 30vw;
+  }
+
+  .hero .standing-girl {
+    top: 33vmax;
+    margin-top: 150px;
+    left: 38vw;
+    width: 13vw;
+  }
+
+  .text-block .about-header {
+    font-size: 2.5rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .text-block {
+    width: 100%;
+  }
+
+  .img-space {
+    width: 100%;
+    min-height: 25vh;
+  }
+
+  .first {
+    order: 1;
+  }
+
+  .first > * {
+    transform: translateY(0);
+  }
+
+  .second {
+    order: 2;
+  }
+
+  .third {
+    order: 3;
+  }
+
+  .fourth {
+    order: 4;
+  }
+
+  .fifth {
+    order: 5;
+  }
+
+  .sixth {
+    order: 6;
+  }
+
+  .house {
+    background-image: url(/assets/svgGraphics/houseMobile.svg);
+    min-height: 300px;
+    margin: 40px 0px 50px 0px;
+    background-position: center;
+  }
+
+  .multi-board {
+    background-image: url(/assets/svgGraphics/mobileMultiboard.svg);
+    min-height: 250px;
+    margin: 40px 0px;
+    background-position: center;
+  }
+
+  .rectangles {
+    background-size: 75%;
+    background-position: center;
+    height: 350px;
+    max-width: 500px;
+  }
+}

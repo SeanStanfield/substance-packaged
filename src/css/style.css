@@ -1,3 +1,310 @@
 * {
-  color: red;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+.nav {
+  /* border: solid; */
+  height: 90px;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 3vw 1rem 3vw;
+}
+
+.nav .nav-menu {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+}
+
+.nav-links {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  list-style-type: none;
+  align-items: center;
+  color: white;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+section {
+  /* border: solid; */
+  position: relative;
+}
+
+section svg {
+  z-index: -1;
+}
+
+section.knowMore svg {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+section.hero {
+  height: calc(100vh - 70px);
+  width: 100%;
+  min-height: 700px;
+  max-height: 1100px;
+  position: relative;
+  z-index: 0;
+}
+
+.hero svg {
+  height: 90vh;
+  width: 100vw;
+  position: absolute;
+}
+
+svg[class*="mobile"] {
+  display: none;
+}
+
+svg[class*="desktop"] {
+  display: block;
+  min-height: 55vw;
+}
+
+section.about {
+  height: auto;
+  padding: 8rem 1rem 0rem 1rem;
+}
+
+section.services {
+  height: auto;
+  margin-top: -20vmin;
+}
+
+section.industry {
+  height: 70vmax; /* change me */
+}
+
+section.knowMore {
+  height: 120vh;
+}
+
+footer {
+  background-color: #f6f6f6;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+}
+
+footer .wrapper .footer-list {
+  list-style: none;
+  text-align: center;
+}
+
+footer .wrapper .footer-list li > * {
+  text-decoration: none;
+  color: rgb(17, 17, 17);
+  font-size: 17px;
+  font-family: "Museo Sans 300";
+  line-height: 1.3;
+}
+
+footer .wrapper .footer-list li h4 {
+  font-size: 1.2rem;
+  padding-bottom: 0.6rem;
+}
+
+.hero-text-wrapper {
+  /* background-color: royalblue; */
+  /* border: thick solid; */
+  top: 150px;
+  position: absolute;
+  width: 95vw;
+  padding-left: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-text-container {
+  position: relative;
+  /* top: 150px; */
+  width: max-content;
+  /* background-color: red; */
+}
+
+[class^="layer"] {
+  position: relative;
+  margin-bottom: 2vmin;
+}
+
+.layer-one {
+  left: 0;
+}
+
+.layer-two {
+  margin-left: 10vw;
+  /* background-color: saddlebrown; */
+}
+
+.layer-three {
+  margin-left: 20vw;
+  width: max-content;
+}
+
+.layer-three h1 {
+  padding-bottom: 20px;
+}
+
+.cta {
+  color: black;
+  text-decoration: none;
+  font-family: "Poppins";
+  background-color: white;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 26px;
+  font-size: 1rem;
+  padding: 0.6rem 1.8rem;
+  float: right;
+}
+
+.hero-text-container h1 {
+  color: white;
+  font-family: "Poppins";
+  font-size: 6vmax;
+  line-height: 1.3;
+}
+
+.hero-text-container h3 {
+  color: whitesmoke;
+  opacity: 0.8;
+  line-height: 1.3;
+  font-family: "Museo Sans 700";
+  font-size: 1.7vmax;
+}
+
+.hero-artboard {
+  /* display: none; */
+  position: absolute;
+  left: 6vw;
+  top: 40vh;
+  width: 24vw;
+  max-width: 350px;
+}
+
+.standing-girl {
+  /* display: none; */
+  position: absolute;
+  top: 60vh;
+  left: 32vw;
+  max-height: 38vh;
+}
+
+.about-content {
+  width: 95%;
+  max-width: 1400px;
+  margin: auto;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-space {
+  flex-grow: 1;
+  width: 50%;
+  min-height: 300px;
+  max-height: 300px;
+  background-color: transparent;
+  /* border: dashed green; */
+}
+
+.text-block {
+  flex-grow: 1;
+  width: 50%;
+  height: auto;
+  min-height: 200px;
+  background-color: transparent;
+  /* border: dotted pink; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  /* justify-content: center; */
+}
+
+.text-block .about-header {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  /* white-space: pre-line; */
+  /* width: 100%; */
+  /* border: solid; */
+}
+
+.first > * {
+  position: relative;
+  transform: translateY(-50px);
+}
+
+.text-block .about-body {
+  font-family: "Museo Sans 300", "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 1.35;
+  max-width: 550px;
+  width: 90%;
+  /* border: solid; */
+}
+
+.rectangles {
+  background-image: url(/assets/svgGraphics/rectangles.svg);
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 75%;
+  min-height: 450px;
+}
+
+.sittingWoman {
+  width: 200px;
+  /* min-width: 200px; */
+  position: absolute;
+  top: -100px;
+  right: 20px;
+  z-index: 2;
+}
+
+.house {
+  background-image: url(/assets/svgGraphics/houseDesktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  min-height: 400px;
+}
+
+.multi-board {
+  background-image: url(/assets/svgGraphics/desktopMultiboard.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  min-height: 400px;
 }
