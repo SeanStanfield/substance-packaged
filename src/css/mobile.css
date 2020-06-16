@@ -1,7 +1,7 @@
 @media all and (max-width: 600px) {
   .hero .mobile-hero {
-    max-height: 650px;
-    min-height: 650px;
+    max-height: 700px;
+    min-height: 700px;
   }
 
   .hero .standing-girl {
@@ -12,8 +12,12 @@
     margin-left: 38vw;
   }
 
+  .hero h1 {
+    font-size: 8vw;
+  }
+
   .hero h3 {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   section.hero {
@@ -22,8 +26,8 @@
   }
 
   .hero .hero-artboard {
-    left: 10vw;
-    top: 140px;
+    left: 7vw;
+    top: 150px;
     margin-top: 9vh;
     padding-top: 12vw;
     width: 38vw;

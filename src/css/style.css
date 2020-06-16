@@ -9,6 +9,14 @@ body {
   overflow-x: hidden !important;
 }
 
+.logo .desktop {
+  display: inline-block;
+}
+
+.logo .mobile {
+  display: none;
+}
+
 .nav {
   /* border: solid; */
   height: 90px;
@@ -215,7 +223,7 @@ footer .wrapper .footer-list li h4 {
 .standing-girl {
   /* display: none; */
   position: absolute;
-  top: 60vh;
+  bottom: 0vh;
   left: 32vw;
   max-height: 38vh;
 }
@@ -249,7 +257,7 @@ footer .wrapper .footer-list li h4 {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   /* justify-content: center; */
 }
 
@@ -279,7 +287,7 @@ footer .wrapper .footer-list li h4 {
 .rectangles {
   background-image: url(/src/img/svgGraphics/rectangles.svg);
   background-repeat: no-repeat;
-  background-position: center left;
+  background-position: 30% center;
   background-size: 75%;
   min-height: 450px;
 }
@@ -297,14 +305,18 @@ footer .wrapper .footer-list li h4 {
   background-image: url(/src/img/svgGraphics/houseDesktop.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: center;
   min-height: 400px;
 }
 
 .multi-board {
   background-image: url(/src/img/svgGraphics/desktopMultiboard.svg);
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: center;
   background-size: contain;
   min-height: 400px;
+}
+
+.abstract {
+  display: none;
 }
