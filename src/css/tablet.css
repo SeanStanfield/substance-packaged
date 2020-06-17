@@ -178,4 +178,19 @@
     height: 350px;
     max-width: 500px;
   }
+
+  /* SERVICES */
+
+  .services-text-wrapper {
+    /* top: 350px; */
+    padding-left: 5vw;
+  }
+
+  .services-text-wrapper .services-title {
+    font-size: 8vw;
+  }
+
+  .graph-container {
+    /* top: 45vmax; */
+  }
 }

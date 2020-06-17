@@ -6,7 +6,7 @@
 
 body {
   max-width: 100vw !important;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
 }
 
 .logo .desktop {
@@ -98,8 +98,17 @@ section.about {
 }
 
 section.services {
-  height: auto;
+  height: 100%;
   margin-top: -20vmin;
+  position: relative;
+  bottom: 0;
+  min-height: 200vh;
+}
+
+.services svg {
+  position: absolute;
+  top: 0;
+  /* display: none; */
 }
 
 section.industry {
@@ -108,6 +117,7 @@ section.industry {
 
 section.knowMore {
   height: 120vh;
+  bottom: 0;
 }
 
 footer {
@@ -194,6 +204,10 @@ footer .wrapper .footer-list li h4 {
   font-size: 1rem;
   padding: 0.6rem 1.8rem;
   float: right;
+  animation: heroH1 1s ease forwards;
+  animation-delay: 1.2s;
+  transform: translateX(50vw);
+  opacity: 0;
 }
 
 .hero-text-container h1 {
@@ -201,14 +215,52 @@ footer .wrapper .footer-list li h4 {
   font-family: "Poppins";
   font-size: 6vmax;
   line-height: 1.3;
+  animation: heroH1 1s ease forwards;
+  animation-delay: 0.5s;
+  transform: translateX(50vw);
+  opacity: 0;
+}
+
+.layer-one h1 {
+  animation-delay: 0.5s;
+}
+.layer-two h1 {
+  animation-delay: 0.8s;
+}
+.layer-three h1 {
+  animation-delay: 1.2s;
 }
 
 .hero-text-container h3 {
   color: whitesmoke;
-  opacity: 0.8;
+  opacity: 0;
   line-height: 1.3;
   font-family: "Museo Sans 700";
   font-size: 1.7vmax;
+  animation: heroH3 1s ease forwards;
+  animation-delay: 2s;
+}
+
+@keyframes heroH3 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heroH1 {
+  from {
+    opacity: 0;
+    transform: translateX(50vw);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0vw);
+  }
 }
 
 .hero-artboard {
@@ -218,6 +270,9 @@ footer .wrapper .footer-list li h4 {
   top: 40vh;
   width: 24vw;
   max-width: 350px;
+  opacity: 0;
+  animation: slideFromLeft 1.5s ease forwards;
+  animation-delay: 1.5s;
 }
 
 .standing-girl {
@@ -226,6 +281,19 @@ footer .wrapper .footer-list li h4 {
   bottom: 0vh;
   left: 32vw;
   max-height: 38vh;
+  animation: slideFromLeft 1.5s ease forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .about-content {
@@ -319,4 +387,48 @@ footer .wrapper .footer-list li h4 {
 
 .abstract {
   display: none;
+}
+
+.services-content {
+  padding-top: 32vmax;
+}
+
+.services-text-wrapper {
+  position: relative;
+  /* padding-top: 40px; */
+  padding-left: 40px;
+  color: white;
+  margin: auto;
+  max-width: 1350px;
+}
+
+.services-text-wrapper .services-title {
+  font-family: "poppins", sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.services-text-wrapper .services-para {
+  font-family: "Museo Sans 300";
+  font-size: 19px;
+  max-width: 450px;
+}
+
+.graph-container {
+  display: block;
+  height: 93vmin;
+  width: 93vmin;
+  position: relative;
+  left: 50%;
+  margin-top: 10vmin;
+  transform: translateX(-50%);
+}
+
+.graph-container .graph {
+  margin: auto;
+  width: 150%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
 }
