@@ -12,6 +12,10 @@
     margin-top: -13vmin;
   }
 
+  .services-content {
+    padding-top: 25vmax;
+  }
+
   svg[class*="desktop"] {
     display: none;
   }
@@ -19,6 +23,15 @@
   svg[class*="mobile"] {
     display: block;
     min-height: 800px;
+  }
+
+  .graph-container svg[class*="mobile"] {
+    display: block;
+    min-height: unset;
+  }
+
+  .graph-container {
+    top: 30px;
   }
 
   .sittingWoman {
@@ -118,6 +131,22 @@
   .text-block .about-header {
     font-size: 2.5rem;
   }
+
+  .graph-container .graph {
+    width: 100%;
+    height: auto;
+    /* margin: auto; */
+  }
+
+  .graph-points {
+    width: 100%;
+    height: auto;
+    min-height: 97vmin;
+  }
+
+  .graphBlob {
+    font-size: 0.6em;
+  }
 }
 
 @media all and (max-width: 768px) {
@@ -184,13 +213,14 @@
   .services-text-wrapper {
     /* top: 350px; */
     padding-left: 5vw;
+    padding-top: 40px;
   }
 
   .services-text-wrapper .services-title {
     font-size: 8vw;
   }
 
-  .graph-container {
-    /* top: 45vmax; */
+  .services-content {
+    padding-top: 250px;
   }
 }

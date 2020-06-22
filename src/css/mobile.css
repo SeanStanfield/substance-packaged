@@ -52,7 +52,7 @@
 
   section.services {
     margin-top: -20vh;
-    z-index: -1;
+    /* z-index: ; */
   }
 
   .sittingWoman {
@@ -61,7 +61,7 @@
   }
 
   .services-content {
-    padding-top: 26vh;
+    padding-top: 18vh;
   }
 
   .services-text-wrapper .services-para {
@@ -70,6 +70,10 @@
   }
 
   .graph-container {
-    /* top: 10vh; */
+    top: 40px;
+  }
+
+  .graphBlob {
+    font-size: 0.7em;
   }
 }

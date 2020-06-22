@@ -109,7 +109,12 @@ section.services {
   position: absolute;
   top: 0;
   /* display: none; */
+  /* z-index: 100; */
 }
+
+/* .services svg path:hover {
+  fill: red !important;
+} */
 
 section.industry {
   height: 70vmax; /* change me */
@@ -390,13 +395,14 @@ footer .wrapper .footer-list li h4 {
 }
 
 .services-content {
-  padding-top: 32vmax;
+  padding-top: 35vmax;
+  width: 100vw;
 }
 
 .services-text-wrapper {
   position: relative;
   /* padding-top: 40px; */
-  padding-left: 40px;
+  padding-left: 50px;
   color: white;
   margin: auto;
   max-width: 1350px;
@@ -415,20 +421,121 @@ footer .wrapper .footer-list li h4 {
 }
 
 .graph-container {
-  display: block;
-  height: 93vmin;
-  width: 93vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  width: 97vw;
   position: relative;
-  left: 50%;
-  margin-top: 10vmin;
-  transform: translateX(-50%);
+  margin: auto;
+  top: 100px;
+  /* overflow: hidden; */
+  /* pointer-events: none; */
+  /* z-index: -1; */
 }
 
 .graph-container .graph {
-  margin: auto;
-  width: 150%;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   height: 100%;
+  max-height: 100%;
+  min-height: unset !important;
+  /* background-color: green; */
+  pointer-events: all;
+  z-index: 2;
 }
+
+.graph-container .mobile {
+  display: none;
+  z-index: 2;
+}
+
+.graph-points {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: dotted pink;
+  /* display: none; */
+  opacity: 0.1;
+  z-index: 2;
+}
+
+.graphBlob {
+  /* font-size: 2.5vmin; */
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+  display: inline-block;
+  visibility: visible;
+  fill: whitesmoke;
+  line-height: 1.15;
+  letter-spacing: 1.5;
+  text-align: center;
+  cursor: pointer;
+  width: min-content;
+  font-size: 1.4em;
+}
+
+.graphBlob:hover {
+  fill: rgb(19, 27, 146);
+}
+
+.graph-points span.service {
+  position: absolute;
+  font-family: "poppins";
+  font-weight: 500;
+  color: whitesmoke;
+  letter-spacing: 0.2mm;
+  width: min-content;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 2vmin;
+}
+
+/* .graph-points #Innovation {
+  top: 22%;
+  left: 47%;
+}
+
+.graph-points #Branding {
+  top: 28%;
+  left: 61%;
+}
+.graph-points #Sensory {
+  top: 40%;
+  left: 38%;
+}
+.graph-points #Ethno {
+  top: 40%;
+  left: 64%;
+}
+
+.graph-points #Equity {
+  top: 45%;
+  left: 53%;
+}
+.graph-points #Customer {
+  top: 55%;
+  left: 47%;
+}
+.graph-points #User {
+  top: 65%;
+  left: 30%;
+}
+.graph-points #Relationships {
+  top: 65%;
+  left: 58%;
+}
+.graph-points #Design {
+  top: 75%;
+  left: 65%;
+}
+.graph-points #Product {
+  top: 80%;
+  left: 35%;
+}
+.graph-points #SPAM {
+  top: 80%;
+  left: 58%;
+} */

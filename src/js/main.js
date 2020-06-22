@@ -4,4 +4,13 @@ import Scrollbar from "smooth-scrollbar";
 
 // Scrollbar.init(body);
 
-console.log("log from the mainjs file");
+const arrow = document.querySelector("#arrow");
+console.log(arrow);
+
+document.addEventListener("click", (e) => {
+  console.log(e.target);
+});
+
+arrow.addEventListener("click", () => {
+  console.log("arrowPressed");
+});
