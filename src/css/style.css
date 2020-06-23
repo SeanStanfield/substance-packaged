@@ -431,7 +431,7 @@ footer .wrapper .footer-list li h4 {
   top: 100px;
   /* overflow: hidden; */
   /* pointer-events: none; */
-  /* z-index: -1; */
+  z-index: 2;
 }
 
 .graph-container .graph {
@@ -441,24 +441,11 @@ footer .wrapper .footer-list li h4 {
   min-height: unset !important;
   /* background-color: green; */
   pointer-events: all;
-  z-index: 2;
+  z-index: 1;
 }
 
 .graph-container .mobile {
   display: none;
-  z-index: 2;
-}
-
-.graph-points {
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border: dotted pink;
-  /* display: none; */
-  opacity: 0.1;
   z-index: 2;
 }
 
@@ -493,49 +480,81 @@ footer .wrapper .footer-list li h4 {
   font-size: 2vmin;
 }
 
-/* .graph-points #Innovation {
-  top: 22%;
-  left: 47%;
+.popup {
+  background-color: white;
+  width: 230px;
+  height: 250px;
+  border-radius: 25px;
+  border-top-left-radius: 0;
+  z-index: 999;
+  transform: scale(1);
+  /* margin: auto; */
+  color: black;
+  /* border: solid red; */
+  position: absolute;
+  /* top: 1000px; */
+  /* margin-left: 50px; */
+  transition: all 0.6s ease;
+  overflow: hidden;
 }
 
-.graph-points #Branding {
-  top: 28%;
-  left: 61%;
-}
-.graph-points #Sensory {
-  top: 40%;
-  left: 38%;
-}
-.graph-points #Ethno {
-  top: 40%;
-  left: 64%;
+.popup-title {
+  font-family: "poppins";
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+  font-weight: 500;
 }
 
-.graph-points #Equity {
-  top: 45%;
-  left: 53%;
+.popup-list {
+  list-style-position: outside;
+  padding-left: 1.75rem;
+  padding-top: 15px;
+  font-family: "poppins";
+  line-height: 1.3;
 }
-.graph-points #Customer {
-  top: 55%;
-  left: 47%;
+
+.popup-list li {
+  padding-left: 0.25rem;
 }
-.graph-points #User {
-  top: 65%;
-  left: 30%;
+
+.popup .popup-bottom {
+  width: 100%;
+  height: 27%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(237, 239, 241);
 }
-.graph-points #Relationships {
-  top: 65%;
-  left: 58%;
+
+.popup-bottom h5 {
+  font-size: 18px;
+  font-family: "poppins";
+  font-weight: 500;
+  padding-left: 2rem;
+  padding-top: 0.2rem;
 }
-.graph-points #Design {
-  top: 75%;
-  left: 65%;
+
+.popup-bottom a {
+  font-family: "Poppins";
+  padding-left: 2rem;
+  font-size: 14px;
 }
-.graph-points #Product {
-  top: 80%;
-  left: 35%;
+
+.fade-out:not(:hover) {
+  animation: fadeout 4s ease forwards;
 }
-.graph-points #SPAM {
-  top: 80%;
-  left: 58%;
-} */
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
