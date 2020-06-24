@@ -199,10 +199,11 @@ footer .wrapper .footer-list li h4 {
 }
 
 .cta {
-  color: black;
+  color: white;
   text-decoration: none;
   font-family: "Poppins";
-  background-color: white;
+  font-weight: Medium;
+  background-image: linear-gradient(to right, #f3627f, #f09d62);
   text-align: center;
   white-space: nowrap;
   border-radius: 26px;
@@ -314,9 +315,11 @@ footer .wrapper .footer-list li h4 {
   flex-grow: 1;
   width: 50%;
   min-height: 300px;
-  max-height: 300px;
+  max-height: 550px;
   background-color: transparent;
   /* border: dashed green; */
+  display: flex;
+  justify-content: center;
 }
 
 .text-block {
@@ -358,11 +361,18 @@ footer .wrapper .footer-list li h4 {
 }
 
 .rectangles {
-  background-image: url(/src/img/svgGraphics/rectangles.svg);
-  background-repeat: no-repeat;
-  background-position: 30% center;
-  background-size: 75%;
-  min-height: 450px;
+  min-height: 400px;
+}
+
+.rectangles img {
+  width: 38vmax;
+  max-width: 550px;
+  align-self: flex-start;
+}
+
+.img-space.sixth {
+  justify-content: flex-start;
+  padding-left: 3vw;
 }
 
 .sittingWoman {
@@ -383,11 +393,12 @@ footer .wrapper .footer-list li h4 {
 }
 
 .multi-board {
-  background-image: url(/src/img/svgGraphics/desktopMultiboard.svg);
+  /* background-image: url(/src/img/svgGraphics/desktopMultiboard.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
-  min-height: 400px;
+  background-size: contain; */
+  /* min-height: 400px; */
+  height: 100%;
 }
 
 .abstract {
@@ -399,6 +410,12 @@ footer .wrapper .footer-list li h4 {
   width: 100vw;
 }
 
+@media all and (min-width: 1000px) {
+  .graph-section {
+    margin-top: 6vw;
+  }
+}
+
 .services-text-wrapper {
   position: relative;
   /* padding-top: 40px; */
@@ -406,18 +423,27 @@ footer .wrapper .footer-list li h4 {
   color: white;
   margin: auto;
   max-width: 1350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .services-text-wrapper .services-title {
   font-family: "poppins", sans-serif;
   font-size: 3.5rem;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .services-text-wrapper .services-para {
   font-family: "Museo Sans 300";
   font-size: 19px;
-  max-width: 450px;
+  width: 50vw;
+  max-width: 700px;
+  min-width: 550px;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .graph-container {
@@ -426,9 +452,10 @@ footer .wrapper .footer-list li h4 {
   align-items: center;
   height: 97vh;
   width: 97vw;
+  max-height: 80vw;
   position: relative;
   margin: auto;
-  top: 100px;
+  top: 0vmax;
   /* overflow: hidden; */
   /* pointer-events: none; */
   z-index: 2;
@@ -482,8 +509,8 @@ footer .wrapper .footer-list li h4 {
 
 .popup {
   background-color: white;
-  width: 230px;
-  height: 250px;
+  width: 250px;
+  height: max-content;
   border-radius: 25px;
   border-top-left-radius: 0;
   z-index: 999;
@@ -510,7 +537,8 @@ footer .wrapper .footer-list li h4 {
   padding-left: 1.75rem;
   padding-top: 15px;
   font-family: "poppins";
-  line-height: 1.3;
+  line-height: 1.5;
+  padding-bottom: 20px;
 }
 
 .popup-list li {
@@ -520,9 +548,10 @@ footer .wrapper .footer-list li h4 {
 .popup .popup-bottom {
   width: 100%;
   height: 27%;
-  position: absolute;
+  position: relative;
   bottom: 0;
   background-color: rgb(237, 239, 241);
+  padding-bottom: 0.5rem;
 }
 
 .popup-bottom h5 {
@@ -533,14 +562,22 @@ footer .wrapper .footer-list li h4 {
   padding-top: 0.2rem;
 }
 
-.popup-bottom a {
+.popup-bottom p {
   font-family: "Poppins";
   padding-left: 2rem;
   font-size: 14px;
 }
 
+.popup-bottom .popup-link {
+  width: max-content;
+  display: inline-block;
+  color: rgb(29, 52, 116);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .fade-out:not(:hover) {
-  animation: fadeout 4s ease forwards;
+  animation: fadeout 2s ease forwards;
 }
 
 @keyframes fadeout {

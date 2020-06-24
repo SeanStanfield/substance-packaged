@@ -13,7 +13,7 @@
   }
 
   .services-content {
-    padding-top: 25vmax;
+    padding-top: calc(250px + 10vh);
   }
 
   svg[class*="desktop"] {
@@ -32,6 +32,7 @@
 
   .graph-container {
     top: 30px;
+    max-height: 95vh;
   }
 
   .sittingWoman {
@@ -132,6 +133,20 @@
     font-size: 2.5rem;
   }
 
+  .rectangles {
+    /* background-size: 75%;
+    background-position: center; */
+    height: 350px;
+    max-width: 500px;
+    /* padding-left: 10vw !important; */
+  }
+
+  .rectangles img {
+    /* align-self: center; */
+    padding-top: 2vh;
+    width: 75vw;
+  }
+
   .graph-container .graph {
     width: 100%;
     height: auto;
@@ -188,24 +203,19 @@
   }
 
   .house {
-    background-image: url(/src/img/svgGraphics/houseMobile.svg);
+    /* background-image: url(/src/img/svgGraphics/houseMobile.svg); */
     min-height: 300px;
     margin: 40px 0px 50px 0px;
     background-position: center;
   }
 
   .multi-board {
-    background-image: url(/src/img/svgGraphics/mobileMultiboard.svg);
+    /* background-image: url(/src/img/svgGraphics/mobileMultiboard.svg); */
     min-height: 250px;
+    height: 80vmin;
+    max-height: 400px;
     margin: 40px 0px;
     background-position: center;
-  }
-
-  .rectangles {
-    background-size: 75%;
-    background-position: center;
-    height: 350px;
-    max-width: 500px;
   }
 
   /* SERVICES */
@@ -220,7 +230,20 @@
     font-size: 8vw;
   }
 
+  .services-text-wrapper .services-para {
+    width: 85vw;
+    min-width: 300px;
+  }
+
   .services-content {
     padding-top: 250px;
+  }
+
+  .img-space.sixth.rectangles {
+    padding-left: 10vw;
+  }
+
+  .rectangles img {
+    align-self: center;
   }
 }
