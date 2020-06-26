@@ -42,7 +42,7 @@
     height: max-content;
     min-height: 250px;
     /* max-height: 500px; */
-    top: 40vh;
+    top: 35vh;
     opacity: 1;
     pointer-events: all;
     position: fixed;
@@ -278,6 +278,7 @@
     min-height: 300px;
     margin: 40px 0px 50px 0px;
     background-position: center;
+    max-width: 85vw;
   }
 
   .multi-board {
