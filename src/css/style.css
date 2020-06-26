@@ -194,6 +194,15 @@ footer .wrapper .footer-list li h4 {
 .layer-three {
   margin-left: 20vw;
   width: max-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.layer-three h1,
+.layer-three h3 {
+  display: block;
+  flex-shrink: 0;
+  width: 100%;
 }
 
 .layer-three h1 {
@@ -201,6 +210,10 @@ footer .wrapper .footer-list li h4 {
 }
 
 .cta {
+  align-self: flex-end;
+  width: 140px;
+  max-width: 15vw;
+  flex-grow: 0;
   color: white;
   text-decoration: none;
   font-family: "Poppins";
@@ -211,6 +224,7 @@ footer .wrapper .footer-list li h4 {
   border-radius: 26px;
   font-size: 1rem;
   padding: 0.6rem 1.8rem;
+  /* margin-top: 20px; */
   /* float: right; */
   animation: heroH1 1s ease forwards;
   animation-delay: 1.2s;

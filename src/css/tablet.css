@@ -181,6 +181,8 @@
   .hero .cta {
     font-size: 13px;
     padding: 0.4rem 1.3rem;
+    width: 120px;
+    max-width: unset;
   }
 
   .hero .layer-three {
