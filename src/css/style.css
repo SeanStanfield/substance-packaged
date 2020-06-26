@@ -211,7 +211,7 @@ footer .wrapper .footer-list li h4 {
   border-radius: 26px;
   font-size: 1rem;
   padding: 0.6rem 1.8rem;
-  float: right;
+  /* float: right; */
   animation: heroH1 1s ease forwards;
   animation-delay: 1.2s;
   transform: translateX(50vw);
