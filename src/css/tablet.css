@@ -42,7 +42,7 @@
     height: max-content;
     min-height: 250px;
     /* max-height: 500px; */
-    top: 30vh;
+    top: 40vh;
     opacity: 1;
     pointer-events: all;
     position: fixed;
@@ -65,6 +65,7 @@
     opacity: 0;
     z-index: 10;
     pointer-events: none;
+    transition: 0.3s ease;
   }
 
   .mobile-popup .popup-bottom {
