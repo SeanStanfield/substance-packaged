@@ -1,6 +1,8 @@
 import Scrollbar from "smooth-scrollbar";
 
 let cssPopup = document.querySelector(".popup");
+let dimmer = document.querySelector(".dimmer");
+console.log(dimmer);
 
 const graphBlobs = document.querySelectorAll(".graphBlob");
 const desktopGraph = document.querySelector(".graph");
@@ -87,7 +89,7 @@ const popupObject = {
       "Understanding Grumpy Retailers",
       "Helping Teachers Teach",
     ],
-    caseStudies: ["Relationships case study", "Relatiobships 2"],
+    caseStudies: ["Relationships case study", "Relationships 2"],
   },
   Design: {
     title: "Design",
@@ -114,12 +116,13 @@ const popupObject = {
 
 function changePopupContents(Blob) {
   let BlobId = Blob.id;
+  console.log(BlobId);
   let newTitle = popupObject[BlobId].title;
   cssPopup.children[0].innerHTML = newTitle;
 
   let newBullets = popupObject[BlobId].points;
 
-  cssPopup.children[1].innerHTML = "";
+  cssPopup.querySelector(".popup-list").innerHTML = "";
   newBullets.forEach((bullet) => {
     let newPoint = document.createElement("li");
     newPoint.classList.add("popup-list-item");
@@ -141,21 +144,46 @@ function changePopupContents(Blob) {
   });
 }
 
-graphBlobs.forEach((blob) => {
-  blob.addEventListener("mouseover", (e) => {
-    // let popup = createPopup(blob);
-    // console.log(popup);
-    // desktopGraph.appendChild(popup);
-    cssPopup.style.top = `${blob.getAttribute("y")}`;
-    cssPopup.style.left = `${blob.getAttribute("x")}`;
-    changePopupContents(blob);
-    cssPopup.classList.remove("fade-out");
-  });
+(function () {
+  let isPortrait = window.matchMedia("all and (orientation: portrait)").matches;
 
-  blob.addEventListener("mouseleave", () => {
-    cssPopup.classList.add("fade-out");
-  });
-});
+  if (isPortrait) {
+    console.log("IM PORTRAIT");
+    graphBlobs.forEach((blob) => {
+      blob.addEventListener("click", () => {
+        cssPopup.style.opacity = 1;
+        dimmer.style.opacity = 0.6;
+        cssPopup.style.pointerEvents = "all";
+        changePopupContents(blob);
+        cssPopup.querySelector(".cross").addEventListener("click", () => {
+          cssPopup.style.opacity = 0;
+          dimmer.style.opacity = 0;
+
+          cssPopup.style.pointerEvents = "none";
+        });
+        cssPopup.classList.remove("fade-out");
+        cssPopup.classList.add("mobile-popup");
+      });
+    });
+  } else {
+    // HOVER EFFECT FOR LANDSCAPE DEVICES ONLY
+    graphBlobs.forEach((blob) => {
+      blob.addEventListener("mouseover", (e) => {
+        // let popup = createPopup(blob);
+        // console.log(popup);
+        // desktopGraph.appendChild(popup);
+        cssPopup.style.top = `${blob.getAttribute("y")}`;
+        cssPopup.style.left = `${blob.getAttribute("x")}`;
+        changePopupContents(blob);
+        cssPopup.classList.remove("fade-out");
+      });
+
+      blob.addEventListener("mouseleave", () => {
+        cssPopup.classList.add("fade-out");
+      });
+    });
+  }
+})();
 
 // const scream = document.createElement("h1");
 // scream.innerText = "PLEASE BE ON TOP";

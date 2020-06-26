@@ -1,3 +1,5 @@
+@import "iconfont/material-icons.css";
+
 * {
   padding: 0;
   margin: 0;
@@ -525,6 +527,10 @@ footer .wrapper .footer-list li h4 {
   overflow: hidden;
 }
 
+.popup .cross {
+  display: none;
+}
+
 .popup-title {
   font-family: "poppins";
   padding-left: 2rem;
@@ -545,7 +551,7 @@ footer .wrapper .footer-list li h4 {
   padding-left: 0.25rem;
 }
 
-.popup .popup-bottom {
+.popup-bottom {
   width: 100%;
   height: 27%;
   position: relative;

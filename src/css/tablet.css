@@ -35,6 +35,76 @@
     max-height: 95vh;
   }
 
+  .mobile-popup {
+    width: 60vw;
+    min-width: 290px;
+    max-width: 400px;
+    height: max-content;
+    min-height: 250px;
+    /* max-height: 500px; */
+    top: 30vh;
+    opacity: 1;
+    pointer-events: all;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    overflow: visible;
+    z-index: 99;
+    transform: scale(1);
+  }
+
+  .dimmer {
+    position: fixed;
+    top: 0;
+    width: 200vw;
+    min-width: 200vw;
+    min-height: 150vh;
+    height: 200vh;
+    background-color: rgb(30, 28, 34);
+    opacity: 0;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .mobile-popup .popup-bottom {
+    height: max-content;
+    width: 100%;
+    flex: 1;
+    align-self: flex-end;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  .mobile-popup .cross {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    /* border: dotted; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile-popup .cross i {
+    font-size: 34px;
+  }
+
+  ul.popup-list {
+    width: 100%;
+  }
+
+  .popup-bottom .popup-link {
+    margin-right: 15px;
+  }
+
+  .popup-hidden {
+    pointer-events: none;
+    opacity: 0;
+  }
+
   .sittingWoman {
     top: -80px;
   }
