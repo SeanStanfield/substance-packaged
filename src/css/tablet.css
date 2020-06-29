@@ -9,11 +9,11 @@
   }
 
   section.services {
-    margin-top: -13vmin;
+    /* margin-top: -13vmin; */
   }
 
   .services-content {
-    padding-top: calc(250px + 10vh);
+    /* padding-top: calc(250px + 10vh); */
   }
 
   svg[class*="desktop"] {
@@ -31,8 +31,6 @@
   }
 
   .graph-container {
-    top: 30px;
-    max-height: 95vh;
   }
 
   .mobile-popup {
@@ -207,11 +205,8 @@
   }
 
   .rectangles {
-    /* background-size: 75%;
-    background-position: center; */
     height: 350px;
     max-width: 500px;
-    /* padding-left: 10vw !important; */
   }
 
   .rectangles img {
@@ -220,10 +215,9 @@
     width: 75vw;
   }
 
-  .graph-container .graph {
-    width: 100%;
-    height: auto;
-    /* margin: auto; */
+  .graph-container {
+    width: 95vw;
+    height: 95vh;
   }
 
   .graph-points {
@@ -234,6 +228,16 @@
 
   .graphBlob {
     font-size: 0.6em;
+  }
+
+  section.services {
+    margin-top: -12vw;
+  }
+
+  .services .mobile-services {
+    height: 125%;
+    width: 100%;
+    min-height: 200px;
   }
 }
 
@@ -309,8 +313,8 @@
     min-width: 300px;
   }
 
-  .services-content {
-    padding-top: 250px;
+  section.services {
+    margin-top: -15vw;
   }
 
   .img-space.sixth.rectangles {

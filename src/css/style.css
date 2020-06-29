@@ -100,18 +100,14 @@ section.about {
 }
 
 section.services {
-  height: 100%;
   margin-top: -20vmin;
   position: relative;
   bottom: 0;
-  min-height: 200vh;
 }
 
 .services svg {
   position: absolute;
   top: 0;
-  /* display: none; */
-  /* z-index: 100; */
 }
 
 /* .services svg path:hover {
@@ -119,7 +115,9 @@ section.services {
 } */
 
 section.industry {
-  height: 70vmax; /* change me */
+  height: auto; /* change me */
+  /* border: solid; */
+  margin-top: 12vmax;
 }
 
 section.knowMore {
@@ -422,14 +420,25 @@ footer .wrapper .footer-list li h4 {
 }
 
 .services-content {
-  padding-top: 35vmax;
   width: 100vw;
+  padding-top: 20vw;
+  position: relative;
+  top: 50px;
 }
 
 @media all and (min-width: 1000px) {
   .graph-section {
-    margin-top: 6vw;
+    padding-top: 60px;
   }
+
+  .services-content {
+    top: 30px;
+  }
+}
+
+.desktop-services {
+  height: 120%;
+  width: 100%;
 }
 
 .services-text-wrapper {
@@ -466,21 +475,23 @@ footer .wrapper .footer-list li h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 97vh;
-  width: 97vw;
-  max-height: 80vw;
+  height: auto;
+  width: 95vmax;
+  height: 95vmin;
+  max-height: 80vmax;
   position: relative;
   margin: auto;
   top: 0vmax;
   /* overflow: hidden; */
   /* pointer-events: none; */
   z-index: 2;
+  min-height: 700px;
+  /* opacity: 0; */
 }
 
 .graph-container .graph {
   width: 100%;
   height: 100%;
-  max-height: 100%;
   min-height: unset !important;
   /* background-color: green; */
   pointer-events: all;
@@ -613,5 +624,78 @@ footer .wrapper .footer-list li h4 {
   100% {
     opacity: 0;
     pointer-events: none;
+  }
+}
+
+.industry .industry-title {
+  font-family: "Poppins";
+  font-size: 7vmin;
+  margin-left: 20vmin;
+  padding-top: 50px;
+}
+
+.brandbox {
+  height: 250px;
+  width: 80%;
+  background-color: white;
+  /* border: solid; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 20vmin;
+  margin-top: 50px;
+  transform: translateX(-4.5%);
+}
+
+.brandbox img {
+  flex-grow: 1;
+  width: 16%;
+  height: 80px;
+  object-fit: contain;
+  filter: grayscale();
+  opacity: 0;
+  transition: 1s ease;
+  animation: none;
+}
+
+@media all and (max-width: 800px) {
+  .brandbox {
+    width: 90vw;
+    height: auto;
+    padding: 2rem;
+  }
+  .brandbox img {
+    flex-grow: 1;
+    width: 32%;
+  }
+}
+@media all and (max-width: 450px) {
+  .brandbox img {
+    flex-grow: 1;
+    width: 45%;
+  }
+}
+
+.brandbox img.active {
+  animation: reveal 1.5s ease-in-out forwards;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    filter: grayscale();
+  }
+
+  60% {
+    opacity: 1;
+    filter: none;
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: none;
+    opacity: 1;
   }
 }

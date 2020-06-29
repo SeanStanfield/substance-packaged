@@ -1,5 +1,3 @@
-import Scrollbar from "smooth-scrollbar";
-
 let cssPopup = document.querySelector(".popup");
 let dimmer = document.querySelector(".dimmer");
 console.log(dimmer);
@@ -185,7 +183,16 @@ function changePopupContents(Blob) {
   }
 })();
 
-// const scream = document.createElement("h1");
-// scream.innerText = "PLEASE BE ON TOP";
+const box = document.querySelector(".brandbox");
+const logoArray = [...document.querySelectorAll(".brandbox img")];
+const logoLength = logoArray.length;
+let currentLogo = 0;
+console.log(logoArray);
 
-// desktopGraph.appendChild(scream);
+let loop = setInterval(() => {
+  logoArray[currentLogo].classList.add("active");
+  console.log(++currentLogo);
+  if (currentLogo === logoLength) {
+    clearInterval(loop);
+  }
+}, 180);

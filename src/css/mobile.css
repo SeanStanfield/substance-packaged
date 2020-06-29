@@ -59,8 +59,7 @@
   }
 
   section.services {
-    margin-top: -20vh;
-    /* z-index: ; */
+    margin-top: -22vh;
   }
 
   .sittingWoman {
@@ -68,8 +67,9 @@
     right: 5px;
   }
 
-  .services-content {
-    padding-top: 18vh;
+  .services .mobile-services {
+    height: 132%;
+    max-height: 900px;
   }
 
   .services-text-wrapper .services-para {
@@ -77,12 +77,9 @@
     width: 95%;
   }
 
-  .graph-section {
-    margin-top: -30px;
-  }
-
   .graph-container {
-    top: 40px;
+    height: 50vh;
+    min-height: 300px;
   }
 
   .graphBlob {
