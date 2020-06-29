@@ -85,4 +85,30 @@
   .graphBlob {
     font-size: 0.7em;
   }
+
+  section.industry {
+    margin-top: 120px;
+  }
+
+  .industry .industry-content {
+    width: 95vw;
+    margin: auto;
+    padding-top: 3vh;
+    padding-left: 20px;
+  }
+
+  .industry .industry-title {
+    font-size: 9vw;
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .industry .brandbox {
+    width: 100%;
+    max-width: 99vw;
+  }
+
+  .industry .brandbox img {
+    min-width: 32%;
+  }
 }

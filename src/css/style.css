@@ -123,6 +123,8 @@ section.industry {
 section.knowMore {
   height: 120vh;
   bottom: 0;
+  margin-top: -17vh;
+  min-height: 900px;
 }
 
 footer {
@@ -629,23 +631,38 @@ footer .wrapper .footer-list li h4 {
 
 .industry .industry-title {
   font-family: "Poppins";
-  font-size: 7vmin;
-  margin-left: 20vmin;
+  font-size: 3.5rem;
+  width: 85%;
+  padding-bottom: 20px;
+  font-weight: bolder;
+}
+
+@media all and (min-width: 1500px) {
+  .industry .industry-title {
+    font-size: 5rem;
+  }
+}
+
+.industry-content {
+  width: max-content;
   padding-top: 50px;
+  margin-left: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .brandbox {
-  height: 250px;
+  height: 270px;
   width: 80%;
-  background-color: white;
+  max-width: 90vw;
   /* border: solid; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-left: 20vmin;
   margin-top: 50px;
-  transform: translateX(-4.5%);
 }
 
 .brandbox img {
@@ -657,13 +674,14 @@ footer .wrapper .footer-list li h4 {
   opacity: 0;
   transition: 1s ease;
   animation: none;
+  /* background-color: rgb(235, 235, 235);
+  border-radius: 20px; */
 }
 
 @media all and (max-width: 800px) {
   .brandbox {
     width: 90vw;
     height: auto;
-    padding: 2rem;
   }
   .brandbox img {
     flex-grow: 1;
@@ -672,6 +690,7 @@ footer .wrapper .footer-list li h4 {
 }
 @media all and (max-width: 450px) {
   .brandbox img {
+    text-align: left;
     flex-grow: 1;
     width: 45%;
   }
