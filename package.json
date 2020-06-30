@@ -17,6 +17,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
+    "gsap": "^3.3.4",
     "material-design-icons": "^3.0.1",
     "normalize.css": "^8.0.1",
     "smooth-scrollbar": "^8.5.2"

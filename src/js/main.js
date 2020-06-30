@@ -1,3 +1,9 @@
+import { gsap } from "gsap";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+
 let cssPopup = document.querySelector(".popup");
 let dimmer = document.querySelector(".dimmer");
 console.log(dimmer);
@@ -187,12 +193,18 @@ const box = document.querySelector(".brandbox");
 const logoArray = [...document.querySelectorAll(".brandbox img")];
 const logoLength = logoArray.length;
 let currentLogo = 0;
-console.log(logoArray);
 
-let loop = setInterval(() => {
-  logoArray[currentLogo].classList.add("active");
-  console.log(++currentLogo);
-  if (currentLogo === logoLength) {
-    clearInterval(loop);
-  }
-}, 180);
+ScrollTrigger.create({
+  trigger: ".brandbox",
+  start: "top 70%",
+  onEnter: () => {
+    let loop = setInterval(() => {
+      logoArray[currentLogo].classList.add("active");
+      console.log(++currentLogo);
+      if (currentLogo === logoLength) {
+        clearInterval(loop);
+      }
+    }, 180);
+  },
+  markers: false,
+});
