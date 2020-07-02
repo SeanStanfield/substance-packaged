@@ -111,4 +111,23 @@
   .industry .brandbox img {
     min-width: 32%;
   }
+
+  section.knowMore {
+    min-height: 800px;
+    max-height: 850px;
+  }
+
+  section.knowMore .knowMore-flex-wrapper {
+    margin-top: 5vh;
+  }
+
+  section.knowMore .knowMore-flex-wrapper .knowMore-text {
+    margin-bottom: 15px;
+  }
+}
+
+@media all and (min-width: 450px) {
+  section.knowMore {
+    height: 900px;
+  }
 }

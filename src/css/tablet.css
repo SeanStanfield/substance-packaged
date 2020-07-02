@@ -1,6 +1,5 @@
 @media all and (max-width: 900px), all and (orientation: portrait) {
   section.knowMore {
-    z-index: -1;
   }
 
   section.about {
@@ -252,7 +251,64 @@
   }
 
   section.knowMore {
-    margin-top: -10vh;
+    margin-top: -15vh;
+  }
+
+  .knowMore::before {
+    padding-top: 150px;
+  }
+
+  section.knowMore {
+    height: 90vh;
+    min-height: 1100px;
+    max-height: 1250px;
+  }
+
+  .mobile-knowMore {
+    min-height: 800px;
+  }
+
+  .knowMore .knowMore-flex-wrapper {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    height: 70%;
+    margin-top: 10vh;
+  }
+
+  .knowMore .knowMore-flex-wrapper .knowMore-text {
+    margin-left: 10vw;
+    margin-top: 50px;
+  }
+  section.knowMore .knowMore-flex-wrapper .knowMore-title {
+    font-size: 6vw;
+  }
+  section.knowMore .knowMore-flex-wrapper .knowMore-body {
+    font-size: 19px;
+  }
+
+  section.knowMore .knowMore-flex-wrapper .knowMore-graphic {
+    align-self: center;
+    max-width: 85vw;
+    flex: 4;
+  }
+
+  .knowMore svg.mobile-knowMore {
+    transform: scaleX(-1);
+  }
+
+  .knowMore .knowMore-graphic svg {
+    overflow: visible !important;
+  }
+
+  .knowMore::after {
+    content: "";
+    width: 100vw;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    background-color: #f6f6f6;
+    z-index: -2;
   }
 }
 
@@ -338,5 +394,10 @@
 
   .rectangles img {
     align-self: center;
+  }
+
+  section.knowMore {
+    height: 115vh;
+    min-height: 1000px;
   }
 }

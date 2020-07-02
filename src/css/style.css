@@ -70,6 +70,10 @@ section.knowMore svg {
   width: 100%;
 }
 
+.desktop-knowMore {
+  min-height: 800px;
+}
+
 section.hero {
   height: calc(100vh - 70px);
   width: 100%;
@@ -717,4 +721,100 @@ footer .wrapper .footer-list li h4 {
     filter: none;
     opacity: 1;
   }
+}
+
+.knowMore {
+  /* background-color: rgba(255, 182, 193, 0.507); */
+}
+
+.knowMore::before {
+  content: "";
+  position: relative;
+  padding-top: 375px;
+  width: 100%;
+  display: block;
+}
+
+.knowMore .knowMore-flex-wrapper {
+  width: 100%;
+  height: 65vmin;
+  min-height: 500px;
+  /* border: dotted lime; */
+  display: flex;
+  align-items: center;
+  max-height: 900px;
+  margin-top: 5vh;
+}
+
+.knowMore .knowMore-text {
+  flex: 3;
+}
+
+.knowMore .knowMore-graphic {
+  flex: 5;
+  height: 100%;
+}
+
+.knowMore .knowMore-graphic svg {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  position: static;
+  z-index: 1;
+  max-height: 800px;
+}
+
+.knowMore-text {
+  margin-left: 5vw;
+  color: white;
+}
+
+.knowMore-title {
+  font-family: "poppins";
+  font-size: 4vw;
+  padding-bottom: 15px;
+}
+
+.knowMore-body {
+  font-family: "Museo Sans 300";
+  font-size: 16px;
+  max-width: 500px;
+  padding-bottom: 30px;
+}
+
+@media all and (min-width: 1500px) {
+  .knowMore::before {
+    padding-top: 25vw;
+  }
+
+  .knowMore .knowMore-title {
+    font-size: 4rem;
+  }
+
+  .knowMore .knowMore-text {
+    flex: 4;
+  }
+}
+
+.button-group button {
+  width: 120px;
+  height: 35px;
+  border: none;
+  border-radius: 26px;
+  font-family: "poppins";
+  letter-spacing: 0.1mm;
+}
+
+.button-group .knowMore-case {
+  font-weight: 500;
+  background-color: #f85575;
+  color: white;
+  margin-right: 15px;
+}
+
+.button-group .knowMore-contact {
+  background-color: transparent;
+  border: solid 2px;
+  color: white;
+  border-color: white;
 }
