@@ -123,6 +123,13 @@
 
   section.knowMore .knowMore-flex-wrapper .knowMore-text {
     margin-bottom: 15px;
+    margin-left: 5vw;
+    max-width: 90vw;
+  }
+
+  section.knowMore .knowMore-flex-wrapper .knowMore-graphic {
+    max-width: 90vw;
+    margin-left: -20px;
   }
 }
 
