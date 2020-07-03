@@ -411,6 +411,7 @@ footer .wrapper .footer-list li h4 {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 400px;
+  z-index: 1;
 }
 
 .multi-board {
@@ -724,10 +725,6 @@ footer .wrapper .footer-list li h4 {
   }
 }
 
-.knowMore {
-  /* background-color: rgba(255, 182, 193, 0.507); */
-}
-
 .knowMore::before {
   content: "";
   position: relative;
@@ -857,3 +854,8 @@ footer .wrapper .footer-list li h4 {
     filter: blur(0px);
   }
 }
+/* 
+.location {
+  transform: translateX(30px);
+  fill: pink;
+} */

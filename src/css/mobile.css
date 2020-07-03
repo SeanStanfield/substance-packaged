@@ -60,6 +60,15 @@
     max-width: 380px;
   }
 
+  .house {
+    height: auto;
+    min-height: unset;
+    max-height: 500px;
+    max-width: 400px;
+    min-width: 250px;
+    width: auto;
+  }
+
   section.services {
     margin-top: -22vh;
   }

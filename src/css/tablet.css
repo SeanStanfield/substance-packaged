@@ -354,7 +354,7 @@
   .house {
     /* background-image: url(/src/img/svgGraphics/houseMobile.svg); */
     min-height: 300px;
-    margin: 40px 0px 50px 0px;
+    margin: 0px 0px 50px 0px;
     background-position: center;
     max-width: 85vw;
   }

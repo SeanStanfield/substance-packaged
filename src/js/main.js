@@ -209,6 +209,17 @@ ScrollTrigger.create({
   markers: false,
 });
 
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".house",
+    start: "top 70%",
+  },
+});
+
+gsap.from(".house", { y: -40, duration: 5 });
+
+// tl.to(".location", { x: 30 });
+
 gsap.to(".ballOne", {
   duration: 3,
   repeat: false,
