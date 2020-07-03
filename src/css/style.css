@@ -384,7 +384,8 @@ footer .wrapper .footer-list li h4 {
   min-height: 400px;
 }
 
-.rectangles img {
+.rectangles img,
+.rectangles svg {
   width: 38vmax;
   max-width: 550px;
   align-self: flex-start;
@@ -817,4 +818,42 @@ footer .wrapper .footer-list li h4 {
   border: solid 2px;
   color: white;
   border-color: white;
+}
+
+.rect-draw-stroke {
+  stroke-dasharray: 756;
+  stroke-dashoffset: -756;
+  animation: drawSelf 3s linear forwards;
+}
+
+.circ-draw-stroke {
+  opacity: 1;
+  stroke-dasharray: 107;
+  stroke-dashoffset: 107;
+  animation: drawSelf 3s linear forwards;
+}
+
+.solid-rect {
+  opacity: 0;
+  filter: blur(3px);
+  animation: opacityFill 3s ease forwards;
+  animation-delay: 2s;
+}
+
+[class^="ball"] {
+  opacity: 0;
+  animation: opacityFill 2s ease forwards;
+}
+
+@keyframes drawSelf {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes opacityFill {
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
 }

@@ -208,3 +208,38 @@ ScrollTrigger.create({
   },
   markers: false,
 });
+
+gsap.to(".ballOne", {
+  duration: 3,
+  repeat: false,
+  yoyo: false,
+  ease: "power1.inOut",
+  motionPath: {
+    path: ".ballLineOne",
+    align: "relative",
+  },
+});
+gsap.to(".ballTwo", {
+  duration: 3,
+  repeat: false,
+  yoyo: false,
+  ease: "power1.inOut",
+  motionPath: {
+    path: ".ballLineTwo",
+    align: "relative",
+  },
+});
+gsap.to(".ballThree", {
+  duration: 3,
+  repeat: false,
+  yoyo: false,
+  ease: "power1.inOut",
+  motionPath: {
+    path: ".ballLineThree",
+    align: "relative",
+  },
+});
+
+const UpperRectStroke = document.querySelector(".circ-draw-stroke");
+let UpperLength = UpperRectStroke.getTotalLength();
+console.log(UpperLength);

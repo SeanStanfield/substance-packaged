@@ -52,10 +52,12 @@
     padding-left: 0;
     height: 45vh;
     min-height: 300px;
+    transform: translateY(-22%);
   }
 
-  .rectangles img {
+  .rectangles svg {
     align-self: flex-start;
+    max-width: 380px;
   }
 
   section.services {
@@ -136,5 +138,9 @@
 @media all and (min-width: 450px) {
   section.knowMore {
     height: 900px;
+  }
+
+  div.rectangles.sixth.img-space {
+    transform: translateY(-17%);
   }
 }

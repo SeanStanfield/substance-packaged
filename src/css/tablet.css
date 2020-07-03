@@ -196,7 +196,8 @@
     max-width: 500px;
   }
 
-  .rectangles img {
+  .rectangles img,
+  .rectangles svg {
     /* align-self: center; */
     padding-top: 2vh;
     width: 75vw;
@@ -392,7 +393,8 @@
     padding-left: 10vw;
   }
 
-  .rectangles img {
+  .rectangles img,
+  .rectangles svg {
     align-self: center;
   }
 
