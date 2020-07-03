@@ -144,7 +144,7 @@
   }
 }
 
-@media all and (min-width: 450px) {
+@media all and (min-width: 450px) and (max-width: 600px) {
   section.knowMore {
     height: 900px;
   }
