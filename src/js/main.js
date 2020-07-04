@@ -212,45 +212,125 @@ ScrollTrigger.create({
 let tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".house",
-    start: "top 70%",
+    start: "bottom bottom",
   },
 });
 
-gsap.from(".house", { y: -40, duration: 5 });
+// gsap.from(".pin", { y: -40, duration: 2 });
 
-// tl.to(".location", { x: 30 });
+tl.to(
+  "#houseStroke",
+  {
+    strokeDashoffset: 0,
+    duration: 2,
+  },
+  "-=2"
+);
 
-gsap.to(".ballOne", {
-  duration: 3,
-  repeat: false,
-  yoyo: false,
-  ease: "power1.inOut",
-  motionPath: {
-    path: ".ballLineOne",
-    align: "relative",
-  },
-});
-gsap.to(".ballTwo", {
-  duration: 3,
-  repeat: false,
-  yoyo: false,
-  ease: "power1.inOut",
-  motionPath: {
-    path: ".ballLineTwo",
-    align: "relative",
-  },
-});
-gsap.to(".ballThree", {
-  duration: 3,
-  repeat: false,
-  yoyo: false,
-  ease: "power1.inOut",
-  motionPath: {
-    path: ".ballLineThree",
-    align: "relative",
-  },
+tl.from(".house-circ", {
+  scaleX: 0,
+  scaleY: 0,
+  transformOrigin: "center center",
 });
 
-const UpperRectStroke = document.querySelector(".circ-draw-stroke");
-let UpperLength = UpperRectStroke.getTotalLength();
-console.log(UpperLength);
+tl.from(
+  ".house-para",
+  {
+    scaleX: 0,
+    duration: 2,
+  },
+  "-=0.5"
+);
+
+tl.fromTo(
+  ".pin",
+  {
+    y: -30,
+    opacity: 0,
+    scaleX: 0.7,
+    transformOrigin: "center center",
+    overflow: "visible",
+  },
+  { y: -0, opacity: 1, scaleX: 1 },
+  "-=1"
+);
+
+tl.from("#stem", { scaleY: 0, transformOrigin: "bottom" });
+tl.from(
+  "#leaf",
+  { scaleY: 0, scaleX: 0, transformOrigin: "bottom left" },
+  "-=0.4"
+);
+tl.from(
+  "#flower",
+  { scaleY: 0, scaleX: 0, transformOrigin: "center" },
+  "-=0.3"
+);
+
+let rectTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".rectangles",
+    start: "bottom bottom",
+  },
+});
+
+rectTl.to(".rect-draw-stroke, .circ-draw-stroke", {
+  strokeDashoffset: 0,
+  duration: 2.5,
+  ease: "ease-in-out",
+});
+
+rectTl.to(
+  ".ballOne",
+  {
+    duration: 3,
+    repeat: false,
+    yoyo: false,
+    ease: "power1.inOut",
+    motionPath: {
+      path: ".ballLineOne",
+      align: "relative",
+    },
+  },
+  "-=2"
+);
+rectTl.to(
+  ".ballTwo",
+  {
+    duration: 3,
+    repeat: false,
+    yoyo: false,
+    ease: "power1.inOut",
+    motionPath: {
+      path: ".ballLineTwo",
+      align: "relative",
+    },
+  },
+  "-=2.5"
+);
+rectTl.to(
+  ".ballThree",
+  {
+    duration: 3,
+    repeat: false,
+    yoyo: false,
+    ease: "power1.inOut",
+    motionPath: {
+      path: ".ballLineThree",
+      align: "relative",
+    },
+  },
+  "-=3"
+);
+
+rectTl.from(
+  ".solid-rect",
+  {
+    opacity: 0,
+  },
+  "-=2"
+);
+
+const strokeItem = document.querySelector("#houseStroke");
+let strokeLength = strokeItem.getTotalLength();
+console.log(strokeLength);

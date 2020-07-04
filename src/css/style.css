@@ -340,6 +340,7 @@ footer .wrapper .footer-list li h4 {
   /* border: dashed green; */
   display: flex;
   justify-content: center;
+  overflow: visible;
 }
 
 .text-block {
@@ -406,12 +407,14 @@ footer .wrapper .footer-list li h4 {
 }
 
 .house {
-  background-image: url(/src/img/svgGraphics/houseDesktop.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   min-height: 400px;
   z-index: 1;
+  transform: translateY(-30px);
+}
+
+#houseStroke {
+  stroke-dasharray: 765;
+  stroke-dashoffset: 765;
 }
 
 .multi-board {
@@ -820,22 +823,20 @@ footer .wrapper .footer-list li h4 {
 .rect-draw-stroke {
   stroke-dasharray: 756;
   stroke-dashoffset: -756;
-  animation: drawSelf 3s linear forwards;
 }
 
 .circ-draw-stroke {
   opacity: 1;
   stroke-dasharray: 107;
   stroke-dashoffset: 107;
-  animation: drawSelf 3s linear forwards;
 }
 
-.solid-rect {
+/* .solid-rect {
   opacity: 0;
   filter: blur(3px);
   animation: opacityFill 3s ease forwards;
   animation-delay: 2s;
-}
+} */
 
 [class^="ball"] {
   opacity: 0;

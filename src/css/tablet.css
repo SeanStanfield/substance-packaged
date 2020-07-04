@@ -357,6 +357,7 @@
     margin: 0px 0px 50px 0px;
     background-position: center;
     max-width: 85vw;
+    overflow: visible;
   }
 
   .multi-board {
