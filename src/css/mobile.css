@@ -28,7 +28,7 @@
   .hero .hero-artboard {
     left: 7vw;
     top: 150px;
-    margin-top: 9vh;
+    margin-top: 10vmax;
     padding-top: 12vw;
     width: 38vw;
   }
@@ -90,7 +90,7 @@
 
   .graph-container {
     height: 50vh;
-    min-height: 300px;
+    min-height: 350px;
   }
 
   .graphBlob {
@@ -144,6 +144,7 @@
   }
 }
 
+/* large Mobile screens */
 @media all and (min-width: 450px) and (max-width: 600px) {
   section.knowMore {
     height: 900px;
@@ -151,5 +152,24 @@
 
   div.rectangles.sixth.img-space {
     transform: translateY(-17%);
+  }
+}
+
+/* landscape mobile screens */
+
+@media all and (max-height: 500px) {
+  .hero-text-container h3 {
+    font-size: 13px;
+  }
+  section.hero {
+    height: 90vmax;
+  }
+
+  .knowMore::before {
+    padding-top: 220px;
+  }
+
+  section.knowMore {
+    margin-top: -20vw;
   }
 }

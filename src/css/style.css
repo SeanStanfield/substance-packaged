@@ -95,7 +95,7 @@ svg[class*="mobile"] {
 
 svg[class*="desktop"] {
   display: block;
-  min-height: 55vw;
+  min-height: 65vw;
 }
 
 section.about {
@@ -424,6 +424,7 @@ footer .wrapper .footer-list li h4 {
   background-size: contain; */
   /* min-height: 400px; */
   height: 100%;
+  z-index: 1;
 }
 
 .abstract {

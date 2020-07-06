@@ -58,7 +58,8 @@
 
   .dots {
     left: -140px;
-    top: 100%;
+    top: 90%;
     transform: rotate(-20deg);
+    /* display: none; */
   }
 }

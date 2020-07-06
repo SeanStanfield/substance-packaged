@@ -209,6 +209,29 @@ ScrollTrigger.create({
   markers: false,
 });
 
+let multiTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".multi-board",
+    start: "bottom bottom",
+  },
+});
+
+multiTl.to(".multi-stem-left, .multi-stem-right", {
+  strokeDashoffset: 0,
+  duration: 1,
+  easing: "linear",
+});
+
+multiTl.from(
+  ".multi-node-left, .multi-node-right",
+  {
+    opacity: 0,
+    scale: 0,
+    transformOrigin: "center center",
+  },
+  "-=0.5"
+);
+
 let tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".house",
@@ -239,7 +262,7 @@ tl.from(
     scaleX: 0,
     duration: 2,
   },
-  "-=0.5"
+  "-=1"
 );
 
 tl.fromTo(
@@ -331,6 +354,6 @@ rectTl.from(
   "-=2"
 );
 
-const strokeItem = document.querySelector("#houseStroke");
+const strokeItem = document.querySelector(".multi-stem-right");
 let strokeLength = strokeItem.getTotalLength();
 console.log(strokeLength);
