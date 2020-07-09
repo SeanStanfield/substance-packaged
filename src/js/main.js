@@ -143,7 +143,10 @@ function changePopupContents(Blob) {
     let newLink = document.createElement("a");
     newLink.classList.add("popup-link");
     newLink.innerText = link;
-    newLink.setAttribute("href", "https://www.google.com");
+    newLink.setAttribute(
+      "href",
+      "https://substance-progress.netlify.app/src/pages/casestudies/"
+    );
     oldLinks.appendChild(newLink);
   });
 }
