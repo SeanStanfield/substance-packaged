@@ -229,6 +229,23 @@ multiTl.from(
     scale: 0,
     transformOrigin: "center center",
   },
+  "-=0.25"
+);
+
+multiTl.from(
+  ".panel",
+  {
+    opacity: 0,
+  },
+  "+=2"
+);
+
+multiTl.from(
+  ".panel-line",
+  {
+    scaleX: 0,
+    opacity: 0,
+  },
   "-=0.5"
 );
 
