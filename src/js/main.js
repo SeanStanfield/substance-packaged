@@ -157,8 +157,8 @@ function changePopupContents(Blob) {
 }
 
 function updateJson(linkPressed) {
-  sessionStorage.setItem("myCat", "tango");
-  console.log(sessionStorage.getItem("myCat"));
+  localStorage.setItem("myCat", "Tango");
+  console.log(localStorage.getItem("myCat"));
 }
 
 (function () {
