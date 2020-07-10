@@ -25,7 +25,9 @@ const popupObject = {
       "Bank Accounts",
       "The Weird and Wonderful",
     ],
-    caseStudies: ["Tacticle Dynamics"],
+    caseStudies: ["Innovation NPD"],
+    studyTitle: "Innovation Dymanics Title",
+    studyBody: "Body of article on Innovation",
   },
 
   Branding: {
@@ -36,6 +38,8 @@ const popupObject = {
       "Making the most of what you've got",
     ],
     caseStudies: ["Branding Case Study"],
+    studyTitle: "Brandig Title",
+    StudyBody: "Body of article about branding",
   },
   Sensory: {
     title: "Sensory Testing",
@@ -148,7 +152,13 @@ function changePopupContents(Blob) {
       "https://substance-progress.netlify.app/src/pages/casestudies/"
     );
     oldLinks.appendChild(newLink);
+    updateJson(link);
   });
+}
+
+function updateJson(linkPressed) {
+  sessionStorage.setItem("myCat", "tango");
+  console.log(sessionStorage.getItem("myCat"));
 }
 
 (function () {

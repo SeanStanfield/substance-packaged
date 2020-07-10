@@ -1,6 +1,8 @@
 const navLinks = document.querySelectorAll(".link");
 let mainContent = document.querySelector("#mainContent");
 console.log(navLinks);
+console.log("test");
+console.log(sessionStorage.getItem("myCat"));
 
 // let fs = require("fs");
 // let data = {};
