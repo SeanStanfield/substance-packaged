@@ -148,6 +148,117 @@
     border-radius: 5px;
   }
 
+  .sidebar {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    height: 100vh;
+    max-height: 100vh;
+    width: 35vw;
+    min-width: 300px;
+    background-color: rgb(250, 250, 250);
+    float: right;
+    left: 100vw;
+    transform: translateX(0%);
+    transition: 0.4s ease;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  .sidebar .cross {
+    width: 40px;
+    height: 40px;
+    /* background-color: red; */
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .sidebar .cross::before,
+  .sidebar .cross::after {
+    content: " ";
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    background-color: black;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    transform-origin: center;
+  }
+
+  .sidebar li {
+    list-style: none;
+  }
+
+  .sidebar.active {
+    transform: translateX(-100%);
+  }
+
+  .sidebar .cross::before {
+    transform: rotateZ(45deg);
+  }
+  .sidebar .cross::after {
+    transform: rotateZ(-45deg);
+  }
+
+  .sidebar .pages {
+    margin-top: 20px;
+  }
+
+  .sidebar .pages .side-link {
+    font-family: "poppins";
+    padding: 15px 0px 15px 20px;
+    border-bottom: 1px rgb(214, 214, 214) solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .side-link i {
+    margin-right: 30px;
+    font-size: 32px;
+    transition: 0.3s ease;
+    transform: rotateZ(0deg);
+  }
+
+  .sidebar .inner-list {
+    margin-left: 30px;
+    list-style-type: none;
+    font-family: "poppins";
+    font-size: 13px;
+    color: rgb(80, 80, 80);
+    transform: translateY(-100px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s ease;
+    max-height: 80vh;
+    overflow-y: scroll;
+  }
+
+  .inner-list .inner-list-item {
+    line-height: 1.5rem;
+    padding: 0.4rem 0rem;
+    cursor: pointer;
+  }
+
+  .no-border {
+    border-bottom: none !important;
+  }
+
+  .sidebar i.turned {
+    transform: rotateZ(180deg);
+  }
+
+  .inner-list.active {
+    transform: translateY(0px);
+    opacity: 1;
+    pointer-events: all;
+  }
+
   section.hero {
     min-height: 75vh;
     height: 800px;

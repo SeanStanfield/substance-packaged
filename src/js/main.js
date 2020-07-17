@@ -6,7 +6,7 @@ gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
 let cssPopup = document.querySelector(".popup");
 let dimmer = document.querySelector(".dimmer");
-console.log(dimmer);
+// console.log(dimmer);
 
 const graphBlobs = document.querySelectorAll(".graphBlob");
 const desktopGraph = document.querySelector(".graph");
@@ -25,9 +25,7 @@ const popupObject = {
       "Bank Accounts",
       "The Weird and Wonderful",
     ],
-    caseStudies: ["Innovation NPD"],
-    studyTitle: "Innovation Dymanics Title",
-    studyBody: "Body of article on Innovation",
+    caseStudies: ["Innovation B2B", "Innovation FMCG"],
   },
 
   Branding: {
@@ -37,14 +35,12 @@ const popupObject = {
       "Line Extensions",
       "Making the most of what you've got",
     ],
-    caseStudies: ["Branding Case Study"],
-    studyTitle: "Brandig Title",
-    StudyBody: "Body of article about branding",
+    caseStudies: ["Branding FMCG"],
   },
   Sensory: {
     title: "Sensory Testing",
     points: ["Touch Smell Sight Sound", "The real touchy feely stuff"],
-    caseStudies: ["Sensory study"],
+    caseStudies: ["Sensory Food"],
   },
   Ethno: {
     title: "Ethnographic Immersion",
@@ -54,7 +50,7 @@ const popupObject = {
       "Deep dive stuff",
       "The Unsexy World",
     ],
-    caseStudies: ["Ethno Case study"],
+    caseStudies: ["Ethno Tobacco", "Ethno Financial", "Ethno Safari"],
   },
   Equity: {
     title: "Equity Drivers",
@@ -63,7 +59,7 @@ const popupObject = {
       "Identifying what really matters",
       "Helping Manufacturing with What to Dial up",
     ],
-    caseStudies: ["Equity case study"],
+    caseStudies: ["Equity Telco"],
   },
   Customer: {
     title: "Customer Experience",
@@ -74,7 +70,7 @@ const popupObject = {
       "Buying Motivations",
       "Sorting Out Your Problems",
     ],
-    caseStudies: ["Customer case study"],
+    caseStudies: ["Customer Moments of Truth", "Buying Habits"],
   },
   User: {
     title: "User Experience",
@@ -83,12 +79,12 @@ const popupObject = {
       "Making Things Consumer Centric",
       "Identifying the Red Lines You Can't Cross",
     ],
-    caseStudies: ["User case study"],
+    caseStudies: ["User Experience Online"],
   },
   Product: {
     title: "Product Testing",
     points: ["Home usage Tests", "Which One To Go With Type Tests"],
-    caseStudies: ["Product case study"],
+    caseStudies: ["Home Usage test"],
   },
   Relationships: {
     title: "Relationships",
@@ -97,7 +93,7 @@ const popupObject = {
       "Understanding Grumpy Retailers",
       "Helping Teachers Teach",
     ],
-    caseStudies: ["Relationships case study", "Relationships 2"],
+    caseStudies: ["Relationships Retail"],
   },
   Design: {
     title: "Design",
@@ -107,7 +103,7 @@ const popupObject = {
       "Web Design",
       "Design for Designs Sake",
     ],
-    caseStudies: ["Design case study"],
+    caseStudies: ["Pack Design"],
   },
   SPAM: {
     title: "S.P.A.M",
@@ -118,13 +114,12 @@ const popupObject = {
       "Messaging",
       "Sorting Out Your T's & C's",
     ],
-    caseStudies: ["SPAM case study"],
+    caseStudies: ["SPAM Utility"],
   },
 };
 
 function changePopupContents(Blob) {
   let BlobId = Blob.id;
-  console.log(BlobId);
   let newTitle = popupObject[BlobId].title;
   cssPopup.children[0].innerHTML = newTitle;
 
@@ -139,6 +134,7 @@ function changePopupContents(Blob) {
   });
 
   let newLinks = popupObject[BlobId].caseStudies;
+  // console.log(newLinks);
 
   let oldLinks = cssPopup.querySelector("p");
   oldLinks.innerHTML = "";
@@ -147,25 +143,19 @@ function changePopupContents(Blob) {
     let newLink = document.createElement("a");
     newLink.classList.add("popup-link");
     newLink.innerText = link;
-    newLink.setAttribute(
-      "href",
-      "https://substance-progress.netlify.app/src/pages/casestudies/"
-    );
+    newLink.setAttribute("href", "src/pages/caseStudies/index.html");
     oldLinks.appendChild(newLink);
-    updateJson(link);
+    newLink.addEventListener("mouseover", (e) => {
+      console.log("moused over: " + link);
+      localStorage.setItem("linkPressed", link);
+    });
   });
-}
-
-function updateJson(linkPressed) {
-  localStorage.setItem("myCat", "Tango");
-  console.log(localStorage.getItem("myCat"));
 }
 
 (function () {
   let isPortrait = window.matchMedia("all and (orientation: portrait)").matches;
 
   if (isPortrait) {
-    console.log("IM PORTRAIT");
     graphBlobs.forEach((blob) => {
       blob.addEventListener("click", () => {
         cssPopup.style.opacity = 1;
@@ -186,9 +176,6 @@ function updateJson(linkPressed) {
     // HOVER EFFECT FOR LANDSCAPE DEVICES ONLY
     graphBlobs.forEach((blob) => {
       blob.addEventListener("mouseover", (e) => {
-        // let popup = createPopup(blob);
-        // console.log(popup);
-        // desktopGraph.appendChild(popup);
         cssPopup.style.top = `${blob.getAttribute("y")}`;
         cssPopup.style.left = `${blob.getAttribute("x")}`;
         changePopupContents(blob);
@@ -213,7 +200,8 @@ ScrollTrigger.create({
   onEnter: () => {
     let loop = setInterval(() => {
       logoArray[currentLogo].classList.add("active");
-      console.log(++currentLogo);
+      // console.log(++currentLogo);
+      currentLogo++;
       if (currentLogo === logoLength) {
         clearInterval(loop);
       }
@@ -386,4 +374,4 @@ rectTl.from(
 
 const strokeItem = document.querySelector(".multi-stem-right");
 let strokeLength = strokeItem.getTotalLength();
-console.log(strokeLength);
+// console.log(strokeLength);
