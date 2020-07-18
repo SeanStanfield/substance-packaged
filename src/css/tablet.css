@@ -193,6 +193,11 @@
     list-style: none;
   }
 
+  .sidebar li a {
+    color: rgb(85, 85, 85);
+    text-decoration: none;
+  }
+
   .sidebar.active {
     transform: translateX(-100%);
   }
@@ -235,7 +240,7 @@
     opacity: 0;
     pointer-events: none;
     transition: 0.5s ease;
-    max-height: 80vh;
+    max-height: 70vh;
     overflow-y: scroll;
   }
 
