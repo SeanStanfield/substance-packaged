@@ -142,7 +142,7 @@ form .message {
 }
 
 form button {
-  margin-top: 70px;
+  margin-top: 40px;
   padding: 0.6rem 2.5rem;
   background-color: #3c60b9;
   color: white;
@@ -168,7 +168,7 @@ form button {
 .nav .nav-menu {
   display: flex;
   justify-content: center;
-  width: 25%;
+  width: 35%;
 }
 
 .nav-links {
