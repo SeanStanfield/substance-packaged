@@ -798,13 +798,16 @@ footer .wrapper .footer-list li h4 {
   }
 }
 
-.button-group button {
+.button-group a {
   width: 120px;
   height: 35px;
   border: none;
   border-radius: 26px;
   font-family: "poppins";
   letter-spacing: 0.1mm;
+  text-decoration: none;
+  padding: 0.5rem 0.85rem;
+  transition: 0.2s ease;
 }
 
 .button-group .knowMore-case {
@@ -812,6 +815,16 @@ footer .wrapper .footer-list li h4 {
   background-color: #f85575;
   color: white;
   margin-right: 15px;
+}
+
+.button-group .knowMore-case:hover {
+  background-color: white;
+  color: #f85575;
+}
+
+.button-group .knowMore-contact:hover {
+  background-color: white;
+  color: #f85575;
 }
 
 .button-group .knowMore-contact {

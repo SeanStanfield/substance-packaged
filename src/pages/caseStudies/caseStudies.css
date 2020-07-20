@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+body,
+html {
+  max-width: 100vw !important;
+  width: 100vw !important;
+  overflow-x: hidden;
+}
+
 .logo .desktop {
   display: inline-block;
 }
