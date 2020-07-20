@@ -177,6 +177,8 @@ footer .wrapper .footer-list li h4 {
 .hero-text-container {
   position: relative;
   /* top: 150px; */
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   /* background-color: red; */
 }
@@ -197,6 +199,8 @@ footer .wrapper .footer-list li h4 {
 
 .layer-three {
   margin-left: 20vw;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   display: flex;
   flex-direction: column;
@@ -230,7 +234,9 @@ footer .wrapper .footer-list li h4 {
   padding: 0.6rem 1.8rem;
   /* margin-top: 20px; */
   /* float: right; */
+  -webkit-animation: heroH1 1s ease forwards;
   animation: heroH1 1s ease forwards;
+  -webkit-animation-delay: 1.2s;
   animation-delay: 1.2s;
   transform: translateX(50vw);
   opacity: 0;
@@ -241,19 +247,24 @@ footer .wrapper .footer-list li h4 {
   font-family: "Poppins";
   font-size: 6vmax;
   line-height: 1.3;
+  -webkit-animation: heroH1 1s ease forwards;
   animation: heroH1 1s ease forwards;
+  -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
   transform: translateX(50vw);
   opacity: 0;
 }
 
 .layer-one h1 {
+  -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 .layer-two h1 {
+  -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
 .layer-three h1 {
+  -webkit-animation-delay: 1.2s;
   animation-delay: 1.2s;
 }
 
@@ -263,8 +274,20 @@ footer .wrapper .footer-list li h4 {
   line-height: 1.3;
   font-family: "Museo Sans 700";
   font-size: 1.7vmax;
+  -webkit-animation: heroH3 1s ease forwards;
   animation: heroH3 1s ease forwards;
+  -webkit-animation-delay: 2s;
   animation-delay: 2s;
+}
+
+@-webkit-keyframes heroH3 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes heroH3 {
@@ -274,6 +297,18 @@ footer .wrapper .footer-list li h4 {
 
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes heroH1 {
+  from {
+    opacity: 0;
+    transform: translateX(50vw);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0vw);
   }
 }
 
@@ -297,7 +332,9 @@ footer .wrapper .footer-list li h4 {
   width: 24vw;
   max-width: 350px;
   opacity: 0;
+  -webkit-animation: slideFromLeft 1.5s ease forwards;
   animation: slideFromLeft 1.5s ease forwards;
+  -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
 }
 
@@ -307,9 +344,21 @@ footer .wrapper .footer-list li h4 {
   bottom: 0vh;
   left: 32vw;
   max-height: 38vh;
+  -webkit-animation: slideFromLeft 1.5s ease forwards;
   animation: slideFromLeft 1.5s ease forwards;
+  -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
   opacity: 0;
+}
+
+@-webkit-keyframes slideFromLeft {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideFromLeft {
@@ -526,6 +575,8 @@ footer .wrapper .footer-list li h4 {
   letter-spacing: 1.5;
   text-align: center;
   cursor: pointer;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
   font-size: 1.4em;
 }
@@ -540,6 +591,8 @@ footer .wrapper .footer-list li h4 {
   font-weight: 500;
   color: whitesmoke;
   letter-spacing: 0.2mm;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
   text-align: center;
   line-height: 1.15;
@@ -549,6 +602,8 @@ footer .wrapper .footer-list li h4 {
 .popup {
   background-color: white;
   width: 250px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   border-radius: 25px;
   border-top-left-radius: 0;
@@ -612,6 +667,8 @@ footer .wrapper .footer-list li h4 {
 }
 
 .popup-bottom .popup-link {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   display: inline-block;
   color: rgb(29, 52, 116);
@@ -620,7 +677,24 @@ footer .wrapper .footer-list li h4 {
 }
 
 .fade-out:not(:hover) {
+  -webkit-animation: fadeout 2s ease forwards;
   animation: fadeout 2s ease forwards;
+}
+
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 @keyframes fadeout {
@@ -654,6 +728,8 @@ footer .wrapper .footer-list li h4 {
 }
 
 .industry-content {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   padding-top: 50px;
   margin-left: 10vw;
@@ -679,10 +755,13 @@ footer .wrapper .footer-list li h4 {
   flex-grow: 1;
   width: 16%;
   height: 80px;
+  -o-object-fit: contain;
   object-fit: contain;
+  -webkit-filter: grayscale();
   filter: grayscale();
   opacity: 0;
   transition: 1s ease;
+  -webkit-animation: none;
   animation: none;
   /* background-color: rgb(235, 235, 235);
   border-radius: 20px; */
@@ -707,23 +786,49 @@ footer .wrapper .footer-list li h4 {
 }
 
 .brandbox img.active {
+  -webkit-animation: reveal 1.5s ease-in-out forwards;
   animation: reveal 1.5s ease-in-out forwards;
 }
 
-@keyframes reveal {
+@-webkit-keyframes reveal {
   0% {
     opacity: 0;
+    -webkit-filter: grayscale();
     filter: grayscale();
   }
 
   60% {
     opacity: 1;
+    -webkit-filter: none;
     filter: none;
     transform: scale(1.1);
   }
 
   100% {
     transform: scale(1);
+    -webkit-filter: none;
+    filter: none;
+    opacity: 1;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-filter: grayscale();
+    filter: grayscale();
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-filter: none;
+    filter: none;
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+    -webkit-filter: none;
     filter: none;
     opacity: 1;
   }
@@ -854,7 +959,14 @@ footer .wrapper .footer-list li h4 {
 
 [class^="ball"] {
   opacity: 0;
+  -webkit-animation: opacityFill 2s ease forwards;
   animation: opacityFill 2s ease forwards;
+}
+
+@-webkit-keyframes drawSelf {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes drawSelf {
@@ -863,9 +975,18 @@ footer .wrapper .footer-list li h4 {
   }
 }
 
+@-webkit-keyframes opacityFill {
+  to {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+  }
+}
+
 @keyframes opacityFill {
   to {
     opacity: 1;
+    -webkit-filter: blur(0px);
     filter: blur(0px);
   }
 }

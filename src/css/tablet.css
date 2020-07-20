@@ -1,7 +1,4 @@
 @media all and (max-width: 900px), all and (orientation: portrait) {
-  section.knowMore {
-  }
-
   section.about {
     padding-top: 1rem;
   }
@@ -24,6 +21,8 @@
     width: 60vw;
     min-width: 290px;
     max-width: 400px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     min-height: 250px;
     /* max-height: 500px; */
@@ -54,6 +53,8 @@
   }
 
   .mobile-popup .popup-bottom {
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     width: 100%;
     flex: 1;
