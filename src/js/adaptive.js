@@ -6,7 +6,7 @@ let caseBody = document.querySelector("#studyBody");
 const pageNums = document.querySelectorAll(".page-num");
 const arrLeft = document.querySelector(".arr-left");
 const arrRight = document.querySelector(".arr-right");
-arrows = document.querySelectorAll(".arr");
+const arrows = document.querySelectorAll(".arr");
 let currentPage = document.querySelector(".current-page");
 
 caseTitle.textContent = localStorage.getItem("pressedTitle");
