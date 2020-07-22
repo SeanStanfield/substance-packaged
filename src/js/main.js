@@ -3,7 +3,7 @@ let cssPopup = document.querySelector(".popup");
 let dimmer = document.querySelector(".dimmer");
 // console.log(dimmer);
 
-const graphBlobs = document.querySelectorAll(".graphBlob");
+const [...graphBlobs] = document.querySelectorAll(".graphBlob");
 const desktopGraph = document.querySelector(".graph");
 let popupList = document.querySelector(".popup-list");
 
@@ -119,7 +119,6 @@ function changePopupContents(Blob) {
   cssPopup.children[0].innerHTML = newTitle;
 
   let newBullets = popupObject[BlobId].points;
-
   cssPopup.querySelector(".popup-list").innerHTML = "";
   newBullets.forEach((bullet) => {
     let newPoint = document.createElement("li");
