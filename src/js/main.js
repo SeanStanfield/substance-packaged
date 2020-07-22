@@ -1,3 +1,4 @@
+"use strict";
 let cssPopup = document.querySelector(".popup");
 let dimmer = document.querySelector(".dimmer");
 // console.log(dimmer);

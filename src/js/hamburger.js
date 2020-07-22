@@ -1,3 +1,4 @@
+"use strict";
 const hamburger = document.querySelector(".hamburger-menu");
 const cross = document.querySelector(".sidebar .cross");
 const sidebar = document.querySelector(".sidebar");

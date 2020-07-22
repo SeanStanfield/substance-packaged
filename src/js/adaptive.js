@@ -1,3 +1,5 @@
+"use strict";
+
 let mainContent = document.querySelector("#mainContent");
 let caseTitle = document.querySelector("#studyTitle");
 let caseBody = document.querySelector("#studyBody");
