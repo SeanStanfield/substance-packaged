@@ -1,9 +1,3 @@
-import { gsap } from "gsap";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
-
 let cssPopup = document.querySelector(".popup");
 let dimmer = document.querySelector(".dimmer");
 // console.log(dimmer);

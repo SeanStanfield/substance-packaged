@@ -112,6 +112,7 @@ section.services {
 .services svg {
   position: absolute;
   top: 0;
+  left: 0;
 }
 
 /* .services svg path:hover {
@@ -741,8 +742,8 @@ footer .wrapper .footer-list li h4 {
 
 .brandbox {
   height: 270px;
-  width: 80%;
-  max-width: 90vw;
+  width: 80vw;
+  /* max-width: 1200px; */
   /* border: solid; */
   display: flex;
   align-items: center;
