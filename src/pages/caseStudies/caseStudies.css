@@ -179,6 +179,7 @@ html {
   margin-top: -50vh;
   opacity: 0;
   background-color: rgb(29, 29, 29);
+  pointer-events: none;
 }
 
 #mobileCase {

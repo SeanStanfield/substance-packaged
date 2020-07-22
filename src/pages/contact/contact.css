@@ -261,9 +261,17 @@ footer .wrapper .footer-list li h4 {
   #mainContent {
     margin-left: 25px;
   }
+
+  .contact-info {
+    padding-left: 6vw;
+  }
 }
 
 @media all and (max-width: 768px) {
+  h1.send-message {
+    font-size: 2rem;
+  }
+
   nav.nav {
     padding-right: 0;
   }
@@ -277,7 +285,7 @@ footer .wrapper .footer-list li h4 {
 
   .flex-wrapper .flex-left {
     /* display: none; */
-    background-color: rgb(116, 187, 211);
+    background: linear-gradient(to bottom right, #3b5eb9, #32c6cf);
     padding: 3rem 0;
   }
 
